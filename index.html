@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inversión en Acciones Españolas - Maximiza tus Rentabilidades</title>
-    <!-- Meta Pixel Code - 替换为最新ID：1627324398708544 -->
+    <!-- Meta Pixel Code - 最新ID：1627324398708544 -->
     <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -121,7 +121,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </nav>
 
-    <!-- ============== Hero Section (Sección Destacada) - 增强视觉冲击+CTA优化 + 新增联系按钮 ============== -->
+    <!-- ============== Hero Section (Sección Destacada) - 整合用户提供的contactButton ============== -->
     <header class="pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-r from-dark/95 to-primary/90 text-white" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="container-custom max-w-3xl fade-in">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-shadow">
@@ -134,7 +134,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             <a href="#contacto" class="cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:shadow-2xl hover:scale-105 inline-block mb-6">
                 ¡Contacto por WhatsApp! <i class="fa-brands fa-whatsapp ml-2"></i>
             </a>
-            <!-- 新增：用户要求的contactButton按钮（适配页面风格，增加样式优化） -->
+            <!-- 替换为用户提供的contactButton（保留页面样式适配，确保视觉统一） -->
             <button id="contactButton" class="cta-button bg-white text-primary hover:bg-gray-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 mb-4">
                 联系
             </button>
@@ -484,8 +484,8 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </footer>
 
-    <!-- JavaScript交互优化（全面升级功能+新增折叠面板+锚点高亮 + 整合contactButton点击事件） -->
-    <script>
+    <!-- JavaScript交互优化（整合用户提供的contactButton点击事件，保留其他核心功能） -->
+    <script type="text/javascript">
         // 1. 滚动时导航栏样式变化（优化过渡效果+更细腻的样式切换）
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('mainNav');
@@ -612,19 +612,12 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             });
         });
 
-        // 8. 整合：用户要求的contactButton点击事件
+        // 8. 替换为用户提供的contactButton核心点击事件
         document.getElementById('contactButton').addEventListener('click', function() {
-            // ====== 此处可插入你的业务事件代码（insert_event_code_here） ======
-            // 示例：点击后跳转至联系区域（可替换为你的自定义逻辑，如弹窗、接口请求等）
-            alert('联系按钮被点击！此处可插入你的自定义事件代码');
-            // 可选：自动滚动至contacto区域
-            const contactoElement = document.getElementById('contacto');
-            const navHeight = document.getElementById('mainNav').offsetHeight;
-            const targetPosition = contactoElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            // ====== 此处插入你的业务事件代码（替换 insert_event_code_here） ======
+            // 示例：可在此处添加实际业务逻辑，如触发Meta Pixel事件、打开弹窗、发送请求等
+            // insert_event_code_here;
+            console.log('联系按钮被点击，可在此处添加自定义业务逻辑');
             // ===============================================================
         }, false);
     </script>
