@@ -91,37 +91,37 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
     </style>
 </head>
 <body class="bg-light text-dark font-sans scroll-smooth">
-    <!-- ============== 导航栏（优化滚动样式+移动端菜单交互+模糊背景增强） ============== -->
+    <!-- ============== 导航栏（所有联系链接跳转WhatsApp） ============== -->
     <nav id="mainNav" class="fixed w-full bg-white/95 shadow-sm z-50 transition-all duration-500 bg-blur">
         <div class="container-custom py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2">
                 <i class="fa-solid fa-chart-line text-primary text-2xl"></i>
                 <span class="text-xl font-bold text-dark">AccionesES</span>
             </a>
-            <!-- 桌面端导航（新增当前锚点高亮） -->
+            <!-- 桌面端导航 - Contacto WhatsApp跳转聊天页 -->
             <div class="hidden md:flex gap-8 items-center">
                 <a href="#por-que" class="nav-link text-dark hover:text-primary transition-colors duration-300">¿Por qué invertir?</a>
                 <a href="#oportunidades" class="nav-link text-dark hover:text-primary transition-colors duration-300">Oportunidades</a>
                 <a href="#testimonios" class="nav-link text-dark hover:text-primary transition-colors duration-300">Testimonios</a>
-                <a href="#contacto" class="nav-link text-dark hover:text-whatsapp transition-colors duration-300">Contacto WhatsApp</a>
+                <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="nav-link text-dark hover:text-whatsapp transition-colors duration-300" target="_blank" rel="noopener noreferrer">Contacto WhatsApp</a>
             </div>
-            <!-- 移动端菜单按钮（优化焦点样式+交互反馈） -->
+            <!-- 移动端菜单按钮 -->
             <button id="mobileMenuBtn" class="md:hidden text-dark text-xl focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-md p-1 transition-all">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-        <!-- 移动端下拉菜单（优化过渡动画+淡入效果） -->
+        <!-- 移动端下拉菜单 - Contacto WhatsApp跳转聊天页 -->
         <div id="mobileMenu" class="md:hidden bg-white overflow-hidden transition-all duration-500 ease-in-out mobile-menu-closed fade-in">
             <div class="container-custom py-4 flex flex-col gap-4">
                 <a href="#por-que" class="text-dark hover:text-primary transition-colors py-2 border-b border-gray-100">¿Por qué invertir?</a>
                 <a href="#oportunidades" class="text-dark hover:text-primary transition-colors py-2 border-b border-gray-100">Oportunidades</a>
                 <a href="#testimonios" class="text-dark hover:text-primary transition-colors py-2 border-b border-gray-100">Testimonios</a>
-                <a href="#contacto" class="text-dark hover:text-whatsapp transition-colors py-2">Contacto WhatsApp</a>
+                <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="text-dark hover:text-whatsapp transition-colors py-2" target="_blank" rel="noopener noreferrer">Contacto WhatsApp</a>
             </div>
         </div>
     </nav>
 
-    <!-- ============== Hero Section (Sección Destacada) - 整合用户提供的contactButton ============== -->
+    <!-- ============== Hero Section - 移除中文“联系”按钮，仅保留WhatsApp主CTA ============== -->
     <header class="pt-28 pb-16 md:pt-40 md:pb-32 bg-gradient-to-r from-dark/95 to-primary/90 text-white" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-blend-mode: overlay; background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="container-custom max-w-3xl fade-in">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-shadow">
@@ -130,15 +130,11 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             <p class="text-lg md:text-xl mb-8 text-white/90">
                 Descubre las mejores oportunidades en la Bolsa de Madrid, empresas líderes del IBEX 35 y valores emergentes con potencial explosivo.
             </p>
-            <!-- 优化CTA按钮（加大尺寸+更强hover反馈+震动微动画） -->
-            <a href="#contacto" class="cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:shadow-2xl hover:scale-105 inline-block mb-6">
+            <!-- 主CTA按钮 - 跳转WhatsApp聊天页（仅保留此按钮，移除中文“联系”按钮） -->
+            <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:shadow-2xl hover:scale-105 inline-block mb-6" target="_blank" rel="noopener noreferrer">
                 ¡Contacto por WhatsApp! <i class="fa-brands fa-whatsapp ml-2"></i>
             </a>
-            <!-- 替换为用户提供的contactButton（保留页面样式适配，确保视觉统一） -->
-            <button id="contactButton" class="cta-button bg-white text-primary hover:bg-gray-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 mb-4">
-                联系
-            </button>
-            <!-- 新增次级说明文本，降低用户决策门槛 -->
+            <!-- 次级说明文本（保持原样，视觉布局整洁） -->
             <p class="mt-4 text-white/80 text-sm md:text-base">
                 ✅ Asesoría gratuita | ✅ Sin compromiso | ✅ Respuesta en menos de 1 hora
             </p>
@@ -150,7 +146,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         <div class="container-custom">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">3 Razones para Elegir el Mercado Español</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tarjeta 1: Empresas Estables（优化卡片样式+淡入动画） -->
+                <!-- Tarjeta 1: Empresas Estables -->
                 <div class="bg-light p-8 rounded-xl card-hover-lg fade-in" style="animation-delay: 0.1s">
                     <div class="text-primary text-4xl mb-4">
                         <i class="fa-solid fa-building"></i>
@@ -191,7 +187,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         <div class="container-custom">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Valores del Momento en la Bolsa de Madrid</h2>
 
-            <!-- Tarjeta 1: IBEX 35（优化图片交互+响应式适配） -->
+            <!-- Tarjeta 1: IBEX 35 -->
             <div class="bg-white p-8 rounded-xl mb-12 card-hover-lg fade-in">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="overflow-hidden rounded-lg">
@@ -237,7 +233,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                 </div>
             </div>
 
-            <!-- Tarjeta 3: Inversión para Principiantes（强化CTA转化） -->
+            <!-- Tarjeta 3: Inversión para Principiantes - CTA跳转WhatsApp聊天页 -->
             <div class="bg-white p-8 rounded-xl card-hover-lg fade-in" style="animation-delay: 0.2s">
                 <div class="text-center max-w-2xl mx-auto">
                     <div class="text-primary text-4xl mb-4">
@@ -247,7 +243,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                     <p class="text-grayish mb-6">
                         No tienes experiencia? Nuestro plan de inversión gradual te permite empezar con desde <span class="text-primary font-bold">50€</span> y aprender mientras inviertes, sin riesgos innecesarios.
                     </p>
-                    <a href="#contacto" class="cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:scale-105">
+                    <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:scale-105 inline-block" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-whatsapp mr-2"></i> Consulta por WhatsApp
                     </a>
                 </div>
@@ -255,7 +251,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- ============== Sección: Testimonios（优化用户信任背书+头像交互） ============== -->
+    <!-- ============== Sección: Testimonios ============== -->
     <section id="testimonios" class="section-padding bg-white">
         <div class="container-custom">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Lo Que Dicen Nuestros Clientes</h2>
@@ -277,7 +273,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                             <p class="text-grayish text-sm">Madrid | Inversionista desde 2023</p>
                         </div>
                     </div>
-                    <!-- 新增星级评分，增强信任度 -->
+                    <!-- 星级评分 -->
                     <div class="mt-4 text-secondary">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -304,7 +300,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                             <p class="text-grayish text-sm">Barcelona | Cliente Premium</p>
                         </div>
                     </div>
-                    <!-- 新增星级评分 -->
+                    <!-- 星级评分 -->
                     <div class="mt-4 text-secondary">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -317,12 +313,12 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- ============== Sección: Preguntas Frecuentes（新增折叠面板，优化移动端体验） ============== -->
+    <!-- ============== Sección: Preguntas Frecuentes ============== -->
     <section class="section-padding bg-gray-50">
         <div class="container-custom">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">¿Tienes Dudas? Resolvemos Todas Tus Preguntas</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <!-- Pregunta 1（折叠面板） -->
+                <!-- Pregunta 1 -->
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                     <button class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none" data-target="faq1">
                         <h3 class="font-bold text-lg flex items-center gap-2">
@@ -338,7 +334,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                     </div>
                 </div>
 
-                <!-- Pregunta 2（折叠面板） -->
+                <!-- Pregunta 2 -->
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                     <button class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none" data-target="faq2">
                         <h3 class="font-bold text-lg flex items-center gap-2">
@@ -354,7 +350,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                     </div>
                 </div>
 
-                <!-- Pregunta 3（折叠面板） -->
+                <!-- Pregunta 3 -->
                 <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                     <button class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none" data-target="faq3">
                         <h3 class="font-bold text-lg flex items-center gap-2">
@@ -373,7 +369,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- ============== Sección: Contacto WhatsApp Final (CTA) - 强化转化+视觉冲击 ============== -->
+    <!-- ============== Sección: Contacto WhatsApp Final - 跳转聊天页 ============== -->
     <section id="contacto" class="section-padding bg-gradient-to-r from-primary to-primary/80 text-white" style="background-image: url('https://images.unsplash.com/photo-1605289982747-020d3ecec87c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-blend-mode: overlay; background-size: cover; background-position: center;">
         <div class="container-custom">
             <div class="max-w-4xl mx-auto text-center mb-12 fade-in">
@@ -384,20 +380,19 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                 </p>
             </div>
 
-            <!-- WhatsApp联系按钮卡片（优化阴影+hover效果+转化引导） -->
+            <!-- WhatsApp联系按钮卡片 - 跳转聊天页 -->
             <div class="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-2xl text-center card-hover-lg fade-in">
                 <h3 class="text-2xl font-bold text-dark mb-6">¿Listo para Empezar?</h3>
                 <p class="text-grayish mb-8">
                     Nuestro equipo de asesores financieros está listo para ayudarte a construir tu cartera de inversiones en acciones españolas. Respuestas en menos de 1 hora (horario laboral).
                 </p>
-                <!-- WhatsApp号码34722493330 + 西班牙语预设文案（加大按钮+微动画） -->
-                <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="inline-block cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:shadow-2xl hover:scale-105">
+                <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="inline-block cta-button-lg bg-whatsapp text-white hover:bg-whatsapp/90 hover:shadow-2xl hover:scale-105" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> ¡Contacto por WhatsApp!
                 </a>
                 <p class="text-grayish text-xs text-center mt-6">
                     Número de WhatsApp: <span class="text-whatsapp font-bold">+34 722 493 330</span> (Lunes-Viernes, 9:00-18:00)
                 </p>
-                <!-- 新增信任徽章，降低用户疑虑 -->
+                <!-- 信任徽章 -->
                 <div class="mt-8 flex justify-center gap-4">
                     <span class="bg-gray-100 text-dark px-3 py-1 rounded-full text-xs font-medium">✅ Sin costo inicial</span>
                     <span class="bg-gray-100 text-dark px-3 py-1 rounded-full text-xs font-medium">✅ Asesoramiento personalizado</span>
@@ -407,7 +402,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- ============== Footer (Pie de Página) - 优化布局+移动端适配 ============== -->
+    <!-- ============== Footer - 联系方式跳转WhatsApp聊天页 ============== -->
     <footer class="bg-dark text-white py-12">
         <div class="container-custom">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -422,7 +417,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                     </p>
                 </div>
 
-                <!-- Columna 2: Contacto (WhatsApp号码34722493330) -->
+                <!-- Columna 2: Contacto - WhatsApp跳转聊天页 -->
                 <div class="md:col-span-1">
                     <h4 class="font-bold text-lg mb-4">Contacto</h4>
                     <ul class="space-y-2 text-grayish">
@@ -436,7 +431,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-whatsapp"></i>
-                            <span>+34 722 493 330</span>
+                            <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="hover:text-whatsapp transition-colors duration-300" target="_blank" rel="noopener noreferrer">+34 722 493 330</a>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fa-solid fa-envelope text-primary"></i>
@@ -456,14 +451,14 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                     </ul>
                 </div>
 
-                <!-- Columna 4: Redes Sociales（优化图标hover效果） -->
+                <!-- Columna 4: Redes Sociales - WhatsApp图标跳转聊天页 -->
                 <div class="md:col-span-1">
                     <h4 class="font-bold text-lg mb-4">Síguenos</h4>
                     <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors duration-300">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-whatsapp transition-colors duration-300">
+                        <a href="https://wa.me/34722493330?text=Quisiera obtener más información sobre la inversión en acciones españolas." class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-whatsapp transition-colors duration-300" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors duration-300">
@@ -484,9 +479,9 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </footer>
 
-    <!-- JavaScript交互优化（整合用户提供的contactButton点击事件，保留其他核心功能） -->
+    <!-- JavaScript交互优化（保留所有功能，无多余代码） -->
     <script type="text/javascript">
-        // 1. 滚动时导航栏样式变化（优化过渡效果+更细腻的样式切换）
+        // 1. 滚动时导航栏样式变化
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('mainNav');
             if (window.scrollY > 50) {
@@ -497,7 +492,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                 nav.classList.add('shadow-sm', 'py-4', 'bg-white/95');
             }
 
-            // 2. 新增：滚动锚点高亮（标记当前浏览区域）
+            // 2. 滚动锚点高亮
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
 
@@ -518,7 +513,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             });
         });
 
-        // 3. 移动端菜单交互（优化动画+增强反馈）
+        // 3. 移动端菜单交互
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const menuIcon = mobileMenuBtn.querySelector('i');
@@ -576,7 +571,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             });
         });
 
-        // 6. 新增：FAQ折叠面板交互
+        // 6. FAQ折叠面板交互
         const faqToggles = document.querySelectorAll('.faq-toggle');
         faqToggles.forEach(toggle => {
             toggle.addEventListener('click', function() {
@@ -590,7 +585,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
                 // 切换箭头方向
                 chevronIcon.classList.toggle('rotate-180');
 
-                // 关闭其他FAQ面板（可选，保持界面整洁）
+                // 关闭其他FAQ面板
                 faqToggles.forEach(otherToggle => {
                     if (otherToggle !== this) {
                         const otherTargetId = otherToggle.getAttribute('data-target');
@@ -604,22 +599,13 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             });
         });
 
-        // 7. 新增：页面加载完成后元素淡入动画
+        // 7. 页面加载完成后元素淡入动画
         window.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach(element => {
                 element.style.opacity = '1';
             });
         });
-
-        // 8. 替换为用户提供的contactButton核心点击事件
-        document.getElementById('contactButton').addEventListener('click', function() {
-            // ====== 此处插入你的业务事件代码（替换 insert_event_code_here） ======
-            // 示例：可在此处添加实际业务逻辑，如触发Meta Pixel事件、打开弹窗、发送请求等
-            // insert_event_code_here;
-            console.log('联系按钮被点击，可在此处添加自定义业务逻辑');
-            // ===============================================================
-        }, false);
     </script>
 </body>
 </html>
