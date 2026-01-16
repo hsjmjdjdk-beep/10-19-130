@@ -122,6 +122,12 @@
     <section id="por-que" class="section-padding bg-white">
         <div class="container-custom">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">3 Razones para Elegir el Mercado Español</h2>
+            <!-- 新增Contact按钮（适配页面样式，融入现有布局） -->
+            <div class="text-center mb-12">
+                <button id="contactButton" class="cta-button bg-primary text-white hover:bg-primary/90 hover:shadow-xl">
+                    联系 <i class="fa-solid fa-phone ml-2"></i>
+                </button>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Tarjeta 1: Empresas Estables -->
                 <div class="bg-light p-8 rounded-xl card-hover">
@@ -420,7 +426,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript交互优化（新增移动端菜单+完善滚动效果） -->
+    <!-- JavaScript交互优化（新增移动端菜单+完善滚动效果+Contact按钮点击事件） -->
     <script>
         // 1. 滚动时导航栏样式变化（优化过渡效果）
         window.addEventListener('scroll', function() {
@@ -485,6 +491,16 @@
                 }
             });
         });
+
+        // 5. 新增Contact按钮点击事件监听（预留Facebook事件插入位置）
+        document.getElementById('contactButton').addEventListener('click', function() {
+            // ========== 插入事件代码位置（insert_event_code_here） ==========
+            // 示例：可在此添加Facebook Pixel转化追踪事件、弹窗逻辑、跳转功能等
+            // 示例Facebook事件：fbq('track', 'Contact');
+            alert('联系按钮被点击！可在此处插入自定义事件代码');
+            
+            // 其他后续逻辑...
+        }, false);
     </script>
 </body>
 </html>
