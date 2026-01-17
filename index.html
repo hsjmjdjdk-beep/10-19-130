@@ -479,7 +479,7 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
         </div>
     </footer>
 
-    <!-- JavaScript交互优化（保留所有功能，无多余代码） -->
+    <!-- JavaScript交互优化（保留所有功能，添加Facebook Contact事件追踪） -->
     <script type="text/javascript">
         // 1. 滚动时导航栏样式变化
         window.addEventListener('scroll', function() {
@@ -604,6 +604,15 @@ src="https://www.facebook.com/tr?id=1627324398708544&ev=PageView&noscript=1"
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach(element => {
                 element.style.opacity = '1';
+            });
+        });
+
+        // 新增：8. WhatsApp点击触发Facebook Contact事件追踪
+        const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me/85295611357"]');
+        whatsappLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // 触发Facebook Contact转化事件
+                fbq('track', 'Contact');
             });
         });
     </script>
